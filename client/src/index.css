@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-bg-primary text-white font-sans antialiased min-h-screen overflow-x-hidden;
+  }
+
+  a { @apply no-underline; }
+  img { @apply max-w-full block; }
+  button { @apply font-sans cursor-pointer border-0 outline-none; }
+  input, select, textarea { @apply font-sans outline-none; }
+  ul, ol { list-style: none; }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { @apply bg-bg-secondary; }
+  ::-webkit-scrollbar-thumb { @apply bg-primary rounded-full; }
+  ::-webkit-scrollbar-thumb:hover { @apply bg-primary-light; }
+}
+
+@layer components {
+  /* Glass card */
+  .glass-card {
+    @apply bg-white/[0.04] backdrop-blur-xl border border-white/[0.08] rounded-2xl;
+  }
+
+  /* Gradient text */
+  .text-gradient {
+    @apply bg-gradient-primary bg-clip-text text-transparent;
+  }
+
+  /* Spinner */
+  .spinner {
+    @apply w-10 h-10 rounded-full border-2 border-white/10 border-t-primary animate-spin-slow;
+  }
+
+  /* Skeleton shimmer */
+  .skeleton {
+    background: linear-gradient(90deg, #1e1e2e 25%, rgba(255,255,255,0.08) 50%, #1e1e2e 75%);
+    background-size: 200% 100%;
+    @apply animate-shimmer rounded-xl;
+  }
+
+  /* Star */
+  .star-filled { @apply text-yellow-400 fill-yellow-400; }
+  .star-empty  { @apply text-white/20; }
+}
+
+@layer utilities {
+  .bg-gradient-primary   { background-image: linear-gradient(135deg, #6C63FF 0%, #FF6584 100%); }
+  .bg-gradient-secondary { background-image: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+}
