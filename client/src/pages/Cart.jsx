@@ -1,3 +1,4 @@
+
 import { Link, useNavigate } from 'react-router-dom';
 import { FiTrash2, FiMinus, FiPlus, FiArrowRight, FiShoppingBag } from 'react-icons/fi';
 import { useCart } from '../context/CartContext';
@@ -109,5 +110,4 @@ const Cart = () => {
     </div>
   );
 };
-
 export default Cart;
