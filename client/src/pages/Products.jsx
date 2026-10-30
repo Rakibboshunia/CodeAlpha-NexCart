@@ -21,7 +21,6 @@ const Products = () => {
   const [totalPages, setPages]    = useState(1);
   const [currentPage, setPage]    = useState(1);
   const [showFilters, setShowFilters] = useState(false);
-
   const [search,   setSearch]   = useState(searchParams.get('search')   || '');
   const [category, setCategory] = useState(searchParams.get('category') || '');
   const [sort,     setSort]     = useState(searchParams.get('sort')     || '');
