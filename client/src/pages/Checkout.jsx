@@ -80,6 +80,7 @@ const Checkout = () => {
                 }`}>
                   {step > num ? <FiCheck size={16} /> : icon}
                 </div>
+                
                 <span className={`text-sm font-medium hidden sm:block ${step >= num ? 'text-white' : 'text-white/30'}`}>{label}</span>
               </div>
               {i < STEPS.length - 1 && (
@@ -99,10 +100,12 @@ const Checkout = () => {
                 <h2 className="flex items-center gap-2 font-display font-bold text-xl text-white mb-6"><FiMapPin className="text-primary-light" /> Shipping Address</h2>
                 <form id="shipping-form" onSubmit={handleShipSubmit} className="space-y-4">
                   <div className="grid grid-cols-2 gap-4">
+                    
                     <div>
                       <label className="text-xs font-semibold text-white/40 uppercase tracking-wider block mb-1.5" htmlFor="ship-fullname">Full Name</label>
                       <input id="ship-fullname" type="text" className={inputCls} value={ship.fullName} onChange={(e) => setShip({ ...ship, fullName: e.target.value })} required />
                     </div>
+                    
                     <div>
                       <label className="text-xs font-semibold text-white/40 uppercase tracking-wider block mb-1.5" htmlFor="ship-phone">Phone</label>
                       <input id="ship-phone" type="tel" className={inputCls} placeholder="+1 234 567 8900" value={ship.phone} onChange={(e) => setShip({ ...ship, phone: e.target.value })} required />
