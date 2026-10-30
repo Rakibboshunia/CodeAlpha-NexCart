@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FiMail, FiLock, FiEye, FiEyeOff, FiArrowRight } from 'react-icons/fi';
+
 import { useAuth } from '../context/AuthContext';
 import toast from 'react-hot-toast';
 
@@ -30,6 +31,7 @@ const Login = () => {
       <div className="absolute -bottom-40 -left-20 w-[400px] h-[400px] bg-[radial-gradient(circle,rgba(255,101,132,0.15),transparent_70%)] rounded-full pointer-events-none" />
 
       <div className="w-full max-w-md bg-bg-card border border-white/[0.08] rounded-3xl p-8 shadow-card animate-scale-in relative z-10">
+        
         {/* Logo */}
         <div className="text-center mb-8">
           <Link to="/" className="inline-flex items-center gap-2 mb-6">
